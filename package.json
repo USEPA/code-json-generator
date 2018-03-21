@@ -1,0 +1,27 @@
+{
+  "name": "inventory",
+  "version": "0.1.0",
+  "description": "Library for producing source code inventory from Git APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usgs/inventory.git"
+  },
+  "keywords": [
+    "open source",
+    "github",
+    "gitlab",
+    "inventory",
+    "gsa",
+    "m-16-21"
+  ],
+  "author": "emartinez@usgs.gov",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/usgs/inventory/issues"
+  },
+  "homepage": "https://github.com/usgs/inventory#readme"
+}
