@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/usgs/inventory/issues"
   },
-  "homepage": "https://github.com/usgs/inventory#readme"
+  "homepage": "https://github.com/usgs/inventory#readme",
+  "dependencies": {
+    "node-fetch": "^2.1.1"
+  }
 }
