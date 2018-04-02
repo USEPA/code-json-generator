@@ -1,5 +1,5 @@
 {
-  "name": "inventory",
+  "name": "code-json-generator",
   "version": "0.1.0",
   "description": "Library for producing source code inventory from Git APIs",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usgs/inventory.git"
+    "url": "git+https://github.com/usgs/code-json-generator.git"
   },
   "keywords": [
     "open source",
@@ -27,9 +27,9 @@
   "author": "emartinez@usgs.gov",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/usgs/inventory/issues"
+    "url": "https://github.com/usgs/code-json-generator/issues"
   },
-  "homepage": "https://github.com/usgs/inventory#readme",
+  "homepage": "https://github.com/usgs/code-json-generator#readme",
   "dependencies": {
     "commander": "^2.15.1",
     "inquirer": "^5.1.0",
