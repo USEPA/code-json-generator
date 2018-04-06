@@ -33,6 +33,7 @@
   "dependencies": {
     "commander": "^2.15.1",
     "inquirer": "^5.1.0",
+    "jsonschema": "^1.2.2",
     "node-fetch": "^2.1.1"
   }
 }
