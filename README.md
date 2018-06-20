@@ -1,37 +1,24 @@
 Inventory
 =========
 
-This application generates a machine-readable inventory of USGS software
-releases. To accomplish this goal, the application connects to a series of
-Git hosting API "endpoints", inspects the configured projects, and generates
-a resulting inventory.
+This application generates a machine-readable software inventory compliant
+with [Code.gov Metadata Schema version 2.0.0][1]. To accomplish this goal,
+the application connects to a series of Git hosting API "endpoints",
+inspects the configured projects, and generates an inventory.
 
 The application configuration supports internal/external hosting platforms
 with or without authentication (for private repositories). It currently works
-with GitHub and GitLab APIs but could easily be extended for other hosting
+with GitHub and GitLab REST APIs but could easily be extended for other hosting
 platform APIs as well.
 
 For each project, the application will attempt to use a developer-provided
 "code.json" snippet which is a JSON file containing the "releases" array
-for the project as defined by the
-[Code.gov Metadata Schema version 2.0.0](https://code.gov/#/policy-guide/docs/compliance/inventory-code).
+for the project as defined by the [Code.gov Metadata Schema version 2.0.0][1].
 
 If a "code.json" snippet file is not provided by the project maintainer, the
 application will attempt to infer sufficient/required properties from the
 target project and generate the best possible metadata for inclusion in the
-subsequent agency inventory.
-
-
-Motivation
-----------
-
-Federal policy requires government agencies inventory their software. See
-[https://code.gov/](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
-for details. USGS releases are expected to be found on one of three git hosting
-solutions:
- * The [USGS GitHub](https://github.com/usgs)
- * The public-facing USGS git hosting solution [code.usgs.gov](https://code.usgs.gov)
- * The private-facing USGS git hosting solution
+agency inventory.
 
 
 Getting Started
@@ -45,7 +32,7 @@ application.
 This application is a command line Node application. Node must be installed
 on the system prior to running this application.
 
-[https://nodejs.org/](https://nodejs.org/)
+[https://nodejs.org/][2]
 
 ### Install the application
 
@@ -53,10 +40,11 @@ On the command line:
 ```
 $ npm install -g code-json-generator
 ```
+
 ### Configure the application runtime
 
 The application requires a configuration file to dictate which repositories
-to include in the generated inventory. An [example configuration file](etc/config-example.json)
+to include in the generated inventory. An [example configuration file][3]
 is provided to help get started.
 
 ### Run the application
@@ -91,7 +79,7 @@ Development
 -----------
 
 To develop and possibly contribute to this project please review the
-[code of conduct](./CODE_OF_CONDUCT.md) and [contributing guidelines](CONTRIBUTING.md).
+[code of conduct][4] and [contributing guidelines][5].
 
 ### Obtain the source code
 
@@ -121,3 +109,10 @@ pull request title or description.
 $ git commit -am 'Implemented feature'
 $ git push origin feature-X
 ```
+
+
+[1]: https://code.gov/#/policy-guide/docs/compliance/inventory-code
+[2]: https://nodejs.org/
+[3]: ./etc/config-example.json
+[4]: ./CODE_OF_CONDUCT.md
+[5]: ./CONTRIBUTING.md
