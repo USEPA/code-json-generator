@@ -3,12 +3,14 @@
 //////
 //
 // This script generates a unique list of users from GitLab endpoints. It
-// ignores github.com since emails there are unreliable.
+// ignores github.com since emails there are unreliable. Results are printed
+// in JSON format (as an array) to STDOUT and may be redirected to a file
+// for further processing/review.
 //
 // This script should be run with a configuration file containing only the
 // GitLab endpoints mentioned above. For example:
 //
-// node ./bin/get-users -c ./users-config.json
+// node ./bin/unique-users -c ./config/usgs-git-hosting-platform.json
 //
 /////
 
