@@ -1,6 +1,6 @@
 {
   "name": "code-json-generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Library for producing source code inventory from Git APIs",
   "main": "index.js",
   "scripts": {
@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/usgs/code-json-generator#readme",
   "dependencies": {
-    "commander": "^2.15.1",
-    "inquirer": "^5.1.0",
     "jsonschema": "^1.2.2",
-    "node-fetch": "^2.1.1"
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "node-fetch": "^2.3.0"
   }
 }
