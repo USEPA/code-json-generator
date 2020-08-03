@@ -21,6 +21,7 @@ const pkgJson = require('../package.json');
 
 const GitLabClient = require('../lib/gitlab/client');
 const { exception } = require('console');
+const { command } = require('commander');
 
 const FORMAT_MARKDOWN = 'md';
 const FORMAT_HTML = 'html';
@@ -58,7 +59,12 @@ if (require.main === module) {
   let client = null;
 
   Promise.resolve().then(() => {
-    if (!commander.password) {
+    if (command.password) {
+      process.stderr.write('Providing password on the command line is insecure.\n');
+      return commander.password;
+    } else if (process.env.hasOwnProperty('API_PRIVATE_TOKEN')) {
+      return process.env['API_PRIVATE_TOKEN'];
+    } else {
       return inquirer
         .prompt([
           {
@@ -68,9 +74,6 @@ if (require.main === module) {
           }
         ])
         .then(answers => answers.password);
-    } else {
-      process.stderr.write('Providing password on the command line is insecure.\n');
-      return commander.password;
     }
   }).then(password => {
     commander.password = password;
