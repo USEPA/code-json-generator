@@ -1,4 +1,7 @@
 'use strict';
+require('dotenv').config();
+
+console.log(process.env);
 
 
 module.exports = {
@@ -12,8 +15,4 @@ module.exports = {
   GitHubClient: require('./github/client'),
   GitHubInventoryFactory: require('./github/inventory-factory'),
 
-  // GitLab module
-  GitLab: require('./gitlab'),
-  GitLabClient: require('./gitlab/client'),
-  GitLabInventoryFactory: require('./gitlab/inventory-factory')
 }

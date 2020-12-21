@@ -1,18 +1,12 @@
-Contributing
-============
+## Welcome!
 
-Contributions are welcome from the community. Questions can be asked on the
-[issues page][1]. Before creating a new issue, please take a moment to search
-and make sure a similar issue does not already exist. If one does exist, you
-can comment (most simply even with just a `:+1:`) to show your support for that
-issue.
+We’re so glad you’re thinking about contributing to an EPA open source project!
 
-If you have direct contributions you would like considered for incorporation
-into the project you can [fork this repository][2] and
-[submit a pull request][3] for review.
+Please be aware that this repository is currently undergoing testing, so it is likely we will not immediately address your issue or pull request as your idea may already be in our product roadmap. 
 
+We encourage you to read this project’s CONTRIBUTING policy (you are here), its
+[LICENSE](https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE), and its [README](https://github.com/testorg-2020/code-json-generator/blob/README.md).
 
+All contributions to this project will be released under the MIT dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
 
-[1]: https://github.com/usgs/inventory/issues
-[2]: https://help.github.com/articles/fork-a-repo/
-[3]: https://help.github.com/articles/about-pull-requests/
+If you have any questions or want to read more, check out the [EPA Open Source Project Repo](https://github.com/USEPA/open-source-projects) and [EPA's Interim Open Source Code Guidance](https://developer.epa.gov/guide/open-source-code/).
