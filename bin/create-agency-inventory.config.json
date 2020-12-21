@@ -1,32 +1,13 @@
 {
-  "agency": "Department or Executive Agency ID",
+  "agency": "EPA test",
 
   "endpoints": [
     {
       "type": "github",
-      "organization": "Your bureau/agency organization on GitHub",
-      "username": "User with admin privileges for your organization on GitHub",
-      "password": "Password for admin user for your organization on GitHub",
-      "host": "api.github.com",
-
-      "exclude": [
-        "Project to be excluded",
-        "Another project to be excluded"
-      ],
-      "minimumStatus": "Minimum status level to be included in inventory"
-    },
-    {
-      "type": "gitlab",
-      "organization": "Your bureau/agency team on GitLab",
-      "username": "User with admin privileges for your team on GitLab",
-      "password": "Password for admin user for your team on GitLab",
-      "host": "gitlab.com",
-
-      "exclude": [
-        "Project to be excluded",
-        "Another project to be excluded"
-      ],
-      "minimumStatus": "Minimum status level to be included in inventory"
+      "organization": "testorg-2020",
+      "username": "process.env.username",
+      "password": "process.env.GITHUB_API_TOKEN",
+      "host": "api.github.com"
     }
   ]
 }
