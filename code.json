@@ -1,7 +1,7 @@
 [
   {
     "name": "code-json-generator",
-    "organization": "U.S. Geological Survey",
+    "organization": "U.S. EPA",
     "description": "Library for producing source code inventory from Git APIs",
     "version": "0.1.0",
     "status": "Development",
@@ -10,16 +10,13 @@
       "usageType": "openSource",
       "licenses": [
         {
-          "name": "Public Domain, CC0-1.0",
-          "URL": "https://github.com/usgs/code-json-generator/blob/master/LICENSE.md"
+          "name": "Public Domain, MIT License",
+          "URL": "https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE"
         }
       ]
     },
 
-    "homepageURL": "https://usgs.github.io/code-json-generator/",
-    "downloadURL": "https://github.com/usgs/code-json-generator/archive/master.zip",
-    "disclaimerURL": "https://github.com/usgs/code-json-generator/blob/master/LICENSE.md",
-    "repositoryURL": "https://github.com/usgs/code-json-generator.git",
+    "repositoryURL": "https://github.com/testorg-2020/code-json-generator",
     "vcs": "git",
 
     "laborHours": 0,
@@ -27,10 +24,7 @@
     "tags": [
       "open source",
       "github",
-      "gitlab",
-      "inventory",
-      "gsa",
-      "m-16-21"
+      "epa"
     ],
 
     "languages": [
@@ -38,14 +32,14 @@
     ],
 
     "contact": {
-      "name": "Eric Martinez",
-      "email": "emartinez@usgs.gov"
+      "name": "Michelle Ibarra",
+      "email": "ibarra.michelle@epa.gov"
     },
 
     "date": {
-      "created": "2018-02-27",
-      "lastModified": "2018-03-21",
-      "metadataLastUpdated": "2018-03-21"
+      "created": "2020-12-16",
+      "lastModified": "2020-12-16",
+      "metadataLastUpdated": "2020-12-16"
     }
   }
 ]
