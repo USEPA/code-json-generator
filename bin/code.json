@@ -6,9 +6,9 @@
   },
   "releases": [
     {
-      "name": "code-json-generator",
+      "name": "demo-code-json-repo",
       "organization": "U.S. EPA",
-      "description": "Library for producing source code inventory from Git APIs",
+      "description": "Demo repository to test the code-json-generator project.",
       "version": "0.1.0",
       "status": "Development",
       "permissions": {
@@ -16,11 +16,11 @@
         "licenses": [
           {
             "name": "Public Domain, MIT License",
-            "URL": "https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE"
+            "URL": "https://github.com/testorg-2020/demo-code-json-repo/main/LICENSE"
           }
         ]
       },
-      "repositoryURL": "https://github.com/testorg-2020/code-json-generator",
+      "repositoryURL": "https://github.com/testorg-2020/demo-code-json-repo",
       "vcs": "git",
       "laborHours": 0,
       "tags": [
