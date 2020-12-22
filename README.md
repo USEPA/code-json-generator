@@ -119,7 +119,7 @@ $ git push origin feature-X
 
 ### Credits
 
-This repository reused material from [USGS code-json-generator repository](https://github.com/usgs/code-json-generator/).
+This repository reused material from the [USGS code-json-generator repository](https://github.com/usgs/code-json-generator/).
 
 ### Disclaimer
 
