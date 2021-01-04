@@ -79,6 +79,7 @@ $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.
 > in the current working directory and is called `create-agency-inventory.config.json`.
 > Adjust this usage to suit actual work environment.
 
+The example code.json for the testorg-2020 can be [found here](https://code-json-cg.app.cloud.gov/bin/code.json). 
 
 Development
 -----------
