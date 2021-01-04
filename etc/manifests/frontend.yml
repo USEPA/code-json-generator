@@ -1,0 +1,5 @@
+applications:
+- name: code-json-cg
+  memory: 64M
+  domain: app.cloud.gov
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
