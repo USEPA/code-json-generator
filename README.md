@@ -47,8 +47,8 @@ The application requires a configuration file to dictate which repositories
 to include in the generated inventory. An [example configuration file][3]
 is provided to help get started.
 
-1. Update the configuration file to your Agency's respective endpoints.
-2. The existing create-agency-inventory-config.js file in the bin folder can be deleted.
+1. Update the configuration file with your Agency's respective endpoints.
+2. Delete the existing create-agency-inventory-config.js file in the bin folder.
 3. Move the new configuration file from the etc folder into the bin folder.
 4. Rename the configuration file to create-agency-inventory-config.js.
 
