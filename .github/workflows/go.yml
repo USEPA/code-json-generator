@@ -1,0 +1,28 @@
+name: Update code.json inventory file
+
+on:
+  schedule:
+    # Run every 5 minutes for testing.
+    - cron: "*/5 * * * *"
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: "ubuntu-latest"
+
+    env:
+      #GHE_USERNAME:
+      #GHE_PASSWORD:
+      CF_USERNAME: ${{ secrets.CG_USERNAME}}
+      CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
+
+    
+    steps:
+      - name: Check out code
+      uses: actions/checkout@v2
+
+      - name: Make the cloudgov-deploy script executable
+      run: chmod +x ./bin/deploy-cloudgov
+      
+      - name: Deploy the app to cloud.gov
+      run: ./bin/deploy-cloudgov
