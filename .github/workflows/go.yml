@@ -19,10 +19,10 @@ jobs:
     
     steps:
       - name: Check out code
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Make the cloudgov-deploy script executable
-      run: chmod +x ./bin/deploy-cloudgov
+        run: chmod +x ./bin/deploy-cloudgov
       
       - name: Deploy the app to cloud.gov
-      run: ./bin/deploy-cloudgov
+        run: ./bin/deploy-cloudgov
