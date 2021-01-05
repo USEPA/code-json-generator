@@ -52,7 +52,7 @@ is provided to help get started.
 3. Move the new configuration file from the etc folder into the bin folder.
 4. Rename the configuration file to create-agency-inventory-config.js.
 
-### Run the application
+### Run the application locally
 
 The application provides command-line usage syntax help via the `--help` switch.
 ```
@@ -66,13 +66,14 @@ $ create-inventory.js --help
     -c, --configFile <file>  Configuration file
     -h, --help               output usage information
 ```
+1. Change the working directory to the bin folder. 
 
-To generate an inventory, run the application and provide a configuration file
+2. To generate an inventory, run the application and provide a configuration file
 using the `--configFile <file>` switch. The generated inventory will, by
 default, be printed to STDOUT. This output can be redirected to a file
 for persistence.
 
-```
+``` 
 $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.json
 ```
 > Note: This example assumes a file containing proper configuration is located
