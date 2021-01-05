@@ -26,7 +26,7 @@ jobs:
       - name: Run code json generator
         run: |
           cd ./bin/
-          create-inventory.js --configFile ./create-agency-inventory.config.json > code.json
+          chmod +x create-inventory.js --configFile ./create-agency-inventory.config.json > code.json
 
       - name: Make the cloudgov-deploy script executable
         run: chmod +x ./bin/deploy-cloudgov
