@@ -1,0 +1,3 @@
+#!/bin/bash
+
+create-inventory.js --configFile ./create-agency-inventory.config.json > code.json
