@@ -23,10 +23,8 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      #- name: Run code json generator
-      #  run: |
-      #    cd ./bin/
-      #    chmod +x create-inventory.js --configFile ./create-agency-inventory.config.json > code.json
+      - name: Run code json generator
+        run: chmod +x ./bin/run-codejsongenerator
 
       - name: Make the cloudgov-deploy script executable
         if: ${{ success() }}
