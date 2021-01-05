@@ -3,9 +3,9 @@ name: Update code.json inventory file
 on:
   push:
     branches: [ main ]
-  #schedule:
+  schedule:
     # Run every 5 minutes for testing.
-    #- cron: "*/5 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
