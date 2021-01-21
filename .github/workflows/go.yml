@@ -4,32 +4,41 @@ on:
   #push:
     #branches: [ main ]
   schedule:
-    # Run every 5 minutes for testing.
+    # Run every 2 minutes for testing.
     - cron: '*/2 * * * *'
 
 jobs:
   build:
-    name: Build and Deploy
+    name: Build
     runs-on: "ubuntu-latest"
-
-    env:
-      #GHE_USERNAME:
-      #GHE_PASSWORD:
-      CF_USERNAME: ${{ secrets.CG_USERNAME}}
-      CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
-
-    
+   
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-
+  
+  run:
+    name: Run
+    runs-on: "ubuntu-latest"
+    needs: build
+    
+    steps:
       - name: Run code json generator
         run: chmod +x ./bin/run-codejsongenerator
 
       - name: Make the cloudgov-deploy script executable
         if: ${{ success() }}
         run: chmod +x ./bin/deploy-cloudgov
-      
+  
+  deploy:
+    name: Deploy
+    runs-on: "ubuntu-latest"
+    needs: run
+    
+    env:
+      CF_USERNAME: ${{ secrets.CG_USERNAME}}
+      CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
+    
+    steps:
       - name: Deploy the app to cloud.gov
         if: ${{ success() }}
         run: ./bin/deploy-cloudgov
