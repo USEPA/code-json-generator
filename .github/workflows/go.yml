@@ -1,8 +1,14 @@
 name: Update code.json inventory file
 
 on:
-  #push:
-    #branches: [ main ]
+  pull_request:
+    branches:
+      - '*'
+
+  push:
+    branches:
+      - '*'
+
   schedule:
     # Run every 2 minutes for testing.
     - cron: '*/2 * * * *'
