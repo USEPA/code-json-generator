@@ -28,6 +28,9 @@ jobs:
     needs: build
     
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
       - name: Run code json generator
         run: chmod +x ./bin/run-codejsongenerator
 
@@ -45,6 +48,16 @@ jobs:
       CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
     
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        
+      - name: Run code json generator
+        run: chmod +x ./bin/run-codejsongenerator
+
+      - name: Make the cloudgov-deploy script executable
+        if: ${{ success() }}
+        run: chmod +x ./bin/deploy-cloudgov
+        
       - name: Deploy the app to cloud.gov
         if: ${{ success() }}
         run: ./bin/deploy-cloudgov
