@@ -33,7 +33,7 @@ jobs:
 
       - name: Run code json generator
         run: |
-          chmod +x ./bin/run-codejsongenerator && echo "Run code json generator"
+          ./bin/run-codejsongenerator && echo "Run code json generator"
 
       - name: Commit & Push
         if: ${{ success() }}
