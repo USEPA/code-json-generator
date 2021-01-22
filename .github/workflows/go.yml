@@ -10,8 +10,8 @@ on:
       - '*'
 
   schedule:
-    # Run every 9 minutes for testing.
-    - cron: '*/9 * * * *'
+    # Run every 2 minutes for testing.
+    - cron: '*/2 * * * *'
 
 jobs:
   build:
