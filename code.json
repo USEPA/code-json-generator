@@ -6,42 +6,6 @@
   },
   "releases": [
     {
-      "name": "code-json-generator",
-      "organization": "U.S. EPA",
-      "description": "Library for producing source code inventory from Git APIs",
-      "version": "0.1.0",
-      "status": "Development",
-      "permissions": {
-        "usageType": "openSource",
-        "licenses": [
-          {
-            "name": "Public Domain, MIT License",
-            "URL": "https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE"
-          }
-        ]
-      },
-      "repositoryURL": "https://github.com/testorg-2020/code-json-generator",
-      "vcs": "git",
-      "laborHours": 0,
-      "tags": [
-        "open source",
-        "github",
-        "epa"
-      ],
-      "languages": [
-        "node"
-      ],
-      "contact": {
-        "name": "Michelle Ibarra",
-        "email": "ibarra.michelle@epa.gov"
-      },
-      "date": {
-        "created": "2020-12-16",
-        "lastModified": "2020-01-05",
-        "metadataLastUpdated": "2020-01-25"
-      }
-    },
-    {
       "name": "demo-code-json-repo",
       "organization": "U.S. EPA",
       "description": "Demo repository to test the code-json-generator project.",
@@ -75,6 +39,39 @@
         "created": "2020-12-16",
         "lastModified": "2021-01-05",
         "metadataLastUpdated": "2021-01-25"
+      }
+    },
+    {
+      "name": "testorg-2020/code-json-generator",
+      "organization": "testorg-2020",
+      "description": "",
+      "version": "",
+      "status": "Development",
+      "permissions": {
+        "usageType": "openSource",
+        "licenses": [
+          {
+            "URL": "https://github.com/testorg-2020/code-json-generator/blob/master/LICENSE.md"
+          }
+        ]
+      },
+      "homepageURL": "https://github.com/testorg-2020/code-json-generator",
+      "downloadURL": "https://github.com/testorg-2020/code-json-generator/archive/master.zip",
+      "disclaimerURL": "https://github.com/testorg-2020/code-json-generator/blob/master/DISCLAIMER.md",
+      "repositoryURL": "https://github.com/testorg-2020/code-json-generator.git/",
+      "vcs": "git",
+      "laborHours": 0,
+      "tags": [
+        "usgs"
+      ],
+      "languages": [],
+      "contact": {
+        "name": "testorg-2020"
+      },
+      "date": {
+        "created": "2020-12-22T00:18:39Z",
+        "lastModified": "2021-01-25T19:13:22Z",
+        "metadataLastUpdated": "2021-01-25T19:57:26.313Z"
       }
     }
   ]
