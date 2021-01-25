@@ -11,13 +11,13 @@ on:
 
 
 jobs:
-  build:
-    name: Build
-    runs-on: "ubuntu-latest"
+  # build:
+  #   name: Build
+  #   runs-on: "ubuntu-latest"
    
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Check out code
+  #       uses: actions/checkout@v2
 
   deploy:
     name: Deploy
