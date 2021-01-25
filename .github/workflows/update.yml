@@ -1,0 +1,78 @@
+name: Update code.json inventory file
+
+on:
+
+  schedule:
+    # Run every 2 minutes for testing.
+    - cron: '*/2 * * * *'
+
+jobs:
+  build:
+    name: Build
+    runs-on: "ubuntu-latest"
+   
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+  
+  run:
+    name: Run
+    runs-on: "ubuntu-latest"
+    needs: build
+    
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run code json generator
+        run: |
+          ./bin/run-codejsongenerator && echo "Run code json generator"
+
+      - name: Commit & Push
+        if: ${{ success() }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Automated workflow from GitHub Actions"
+          git push
+      
+  deploy:
+      name: Deploy
+      runs-on: "ubuntu-latest"
+
+      steps:
+        - name: Check out code
+          uses: actions/checkout@v2
+        
+        - name: Deploy to cloud.gov
+          if: ${{ success() }}
+          uses: cloud-gov/cg-cli-tools@main
+          with:
+            cf_api: https://api.fr.cloud.gov
+            cf_username: ${{ secrets.CG_USERNAME }}
+            cf_password: ${{ secrets.CG_PASSWORD }}
+            cf_org: sandbox-epa
+            cf_space: ibarra.michelle 
+
+  
+  # deploy:
+  #   name: Deploy
+  #   runs-on: "ubuntu-latest"
+  #   needs: run
+    
+  #   env:
+  #     CF_USERNAME: ${{ secrets.CG_USERNAME}}
+  #     CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
+    
+  #   steps:
+  #     - name: Check out code
+  #       uses: actions/checkout@v2
+
+  #     - name: Make the cloudgov-deploy script executable
+  #       if: ${{ success() }}
+  #       run: chmod +x ./bin/deploy-cloudgov
+        
+  #     - name: Deploy the app to cloud.gov
+  #       if: ${{ success() }}
+  #       run: ./bin/deploy-cloudgov && echo "Deploy"
