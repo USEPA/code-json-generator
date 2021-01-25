@@ -43,6 +43,16 @@ jobs:
           git add .
           git commit -m "Automated workflow from GitHub Actions"
           git push
+      
+      - name: Deploy
+        if: ${{ success() }}
+        uses: cloud-gov/cg-cli-tools@main
+        with:
+          cf_api: https://api.fr.cloud.gov
+          cf_username: ${{ secrets.CG_USERNAME }}
+          cf_password: ${{ secrets.CG_PASSWORD }}
+          cf_org: sandbox-epa
+          cf_space: ibarra.michelle 
 
   
   # deploy:
@@ -57,9 +67,6 @@ jobs:
   #   steps:
   #     - name: Check out code
   #       uses: actions/checkout@v2
-        
-  #     - name: Run code json generator
-  #       run: chmod +x ./bin/run-codejsongenerator
 
   #     - name: Make the cloudgov-deploy script executable
   #       if: ${{ success() }}
