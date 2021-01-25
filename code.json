@@ -1,45 +1,81 @@
-[
-  {
-    "name": "code-json-generator",
-    "organization": "U.S. EPA",
-    "description": "Library for producing source code inventory from Git APIs",
-    "version": "0.1.0",
-    "status": "Development",
-
-    "permissions": {
-      "usageType": "openSource",
-      "licenses": [
-        {
-          "name": "Public Domain, MIT License",
-          "URL": "https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE"
-        }
-      ]
+{
+  "version": "2.0.0",
+  "agency": "EPA test",
+  "measurementType": {
+    "method": "projects"
+  },
+  "releases": [
+    {
+      "name": "code-json-generator",
+      "organization": "U.S. EPA",
+      "description": "Library for producing source code inventory from Git APIs",
+      "version": "0.1.0",
+      "status": "Development",
+      "permissions": {
+        "usageType": "openSource",
+        "licenses": [
+          {
+            "name": "Public Domain, MIT License",
+            "URL": "https://github.com/testorg-2020/code-json-generator/blob/main/LICENSE"
+          }
+        ]
+      },
+      "repositoryURL": "https://github.com/testorg-2020/code-json-generator",
+      "vcs": "git",
+      "laborHours": 0,
+      "tags": [
+        "open source",
+        "github",
+        "epa"
+      ],
+      "languages": [
+        "node"
+      ],
+      "contact": {
+        "name": "Michelle Ibarra",
+        "email": "ibarra.michelle@epa.gov"
+      },
+      "date": {
+        "created": "2020-12-16",
+        "lastModified": "2020-01-05",
+        "metadataLastUpdated": "2020-01-05"
+      }
     },
-
-    "repositoryURL": "https://github.com/testorg-2020/code-json-generator",
-    "vcs": "git",
-
-    "laborHours": 0,
-
-    "tags": [
-      "open source",
-      "github",
-      "epa"
-    ],
-
-    "languages": [
-      "node"
-    ],
-
-    "contact": {
-      "name": "Michelle Ibarra",
-      "email": "ibarra.michelle@epa.gov"
-    },
-
-    "date": {
-      "created": "2020-12-16",
-      "lastModified": "2020-01-05",
-      "metadataLastUpdated": "2020-01-05"
+    {
+      "name": "demo-code-json-repo",
+      "organization": "U.S. EPA",
+      "description": "Demo repository to test the code-json-generator project.",
+      "version": "0.1.0",
+      "status": "Development",
+      "permissions": {
+        "usageType": "openSource",
+        "licenses": [
+          {
+            "name": "Public Domain, MIT License",
+            "URL": "https://github.com/testorg-2020/demo-code-json-repo/main/LICENSE"
+          }
+        ]
+      },
+      "repositoryURL": "https://github.com/testorg-2020/demo-code-json-repo",
+      "vcs": "git",
+      "laborHours": 0,
+      "tags": [
+        "open source",
+        "github",
+        "epa"
+      ],
+      "languages": [
+        "node"
+      ],
+      "contact": {
+        "name": "Michelle Ibarra",
+        "email": "ibarra.michelle@epa.gov"
+      },
+      "date": {
+        "created": "2020-12-16",
+        "lastModified": "2021-01-05",
+        "metadataLastUpdated": "2021-01-25"
+      }
     }
-  }
-]
+  ]
+}
