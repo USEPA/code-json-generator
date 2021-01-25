@@ -24,17 +24,14 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      
-      - name: Deploy to cloud.gov
-        uses: cloud-gov/cg-cli-tools@main
-        with:
-          cf_api: https://api.fr.cloud.gov
-          cf_username: ${{ secrets.CG_USERNAME }}
-          cf_password: ${{ secrets.CG_PASSWORD }}
-          cf_org: sandbox-epa
-          cf_space: ibarra.michelle 
+    - uses: actions/checkout@v2
+    - uses: cloud-gov/cg-cli-tools@main
+      with:
+        cf_api: https://api.fr.cloud.gov
+        cf_username: ${{ secrets.CG_USERNAME }}
+        cf_password: ${{ secrets.CG_PASSWORD }}
+        cf_org: sandbox-epa
+        cf_space: ibarra.michelle 
 
   # run:
   #   name: Run
