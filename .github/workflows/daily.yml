@@ -1,4 +1,4 @@
-name: Update code.json inventory file
+name: "Daily code.json update"
 
 on:
   schedule:
