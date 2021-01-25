@@ -1,6 +1,6 @@
 name: Update code.json inventory file
 
-on: push
+on: [push, pull_request]
 
 jobs:
   build:
@@ -11,20 +11,20 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
   
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to cloud.gov
-        uses: cloud-gov/cg-cli-tools@main
-        with: 
-          cf_api: https://api.fr.cloud.gov
-          cf_username: ${{ secrets.CG_USERNAME }}
-          cf_password: ${{ secrets.CG_PASSWORD }}
-          cf_org: sandbox-epa
-          cf_space: ibarra.michelle
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Deploy to cloud.gov
+  #       uses: cloud-gov/cg-cli-tools@main
+  #       with: 
+  #         cf_api: https://api.fr.cloud.gov
+  #         cf_username: ${{ secrets.CG_USERNAME }}
+  #         cf_password: ${{ secrets.CG_PASSWORD }}
+  #         cf_org: sandbox-epa
+  #         cf_space: ibarra.michelle
 
   # run:
   #   name: Run
