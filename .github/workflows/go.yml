@@ -44,15 +44,15 @@ jobs:
           git commit -m "Automated workflow from GitHub Actions"
           git push
       
-      - name: Deploy
-        if: ${{ success() }}
-        uses: cloud-gov/cg-cli-tools@main
-        with:
-          cf_api: https://api.fr.cloud.gov
-          cf_username: ${{ secrets.CG_USERNAME }}
-          cf_password: ${{ secrets.CG_PASSWORD }}
-          cf_org: sandbox-epa
-          cf_space: ibarra.michelle 
+      # - name: Deploy
+      #   if: ${{ success() }}
+      #   uses: cloud-gov/cg-cli-tools@main
+      #   with:
+      #     cf_api: https://api.fr.cloud.gov
+      #     cf_username: ${{ secrets.CG_USERNAME }}
+      #     cf_password: ${{ secrets.CG_PASSWORD }}
+      #     cf_org: sandbox-epa
+      #     cf_space: ibarra.michelle 
 
   
   # deploy:
