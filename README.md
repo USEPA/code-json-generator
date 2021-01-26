@@ -1,5 +1,8 @@
+
 Inventory
 =========
+
+![Daily code.json update](https://github.com/testorg-2020/code-json-generator/workflows/Daily%20code.json%20update/badge.svg)
 
 This application generates a machine-readable software inventory compliant
 with [Code.gov Metadata Schema version 2.0.0][1]. To accomplish this goal,
