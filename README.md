@@ -7,7 +7,7 @@ Inventory
 This application generates a machine-readable software inventory compliant
 with [Code.gov Metadata Schema version 2.0.0][1]. To accomplish this goal,
 the application connects to a series of Git hosting API "endpoints",
-inspects the configured projects, and generates an inventory.
+inspects the configured projects, and generates an inventory. This application has been enhanced to automate the generation of the Agency's code.json file through GitHub Actions.
 
 The application configuration supports internal/external hosting platforms
 with or without authentication (for private repositories). It currently works
