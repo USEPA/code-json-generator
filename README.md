@@ -7,7 +7,7 @@ Inventory
 This application generates a machine-readable software inventory compliant
 with [Code.gov Metadata Schema version 2.0.0][1]. To accomplish this goal,
 the application connects to a series of Git hosting API "endpoints",
-inspects the configured projects, and generates an inventory. This application has been enhanced to automate the generation of the Agency's code.json file through GitHub Actions.
+inspects the configured projects, and generates an inventory. This application has been enhanced to automate the generation of the [Agency's code.json file](https://code-json-cg.app.cloud.gov/code.json) through GitHub Actions.
 
 The application configuration supports internal/external hosting platforms
 with or without authentication (for private repositories). It currently works
@@ -83,7 +83,7 @@ $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.
 > in the current working directory and is called `create-agency-inventory.config.json`.
 > Adjust this usage to suit actual work environment.
 
-The example code.json for the testorg-2020 can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
+The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
 
 Development
 -----------
