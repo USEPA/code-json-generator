@@ -4,7 +4,7 @@
   "endpoints": [
     {
       "type": "github",
-      "organization": "testorg-2020",
+      "organization": "usepa",
       "username": "process.env.username",
       "password": "process.env.GITHUB_API_TOKEN",
       "host": "api.github.com",
