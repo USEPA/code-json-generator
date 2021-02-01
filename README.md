@@ -57,6 +57,8 @@ is provided to help get started.
 
 ### Run the application locally
 
+Running the application locally will help identify the specific repositories with missing or invalid code.json files. After all repositories have a valid code.json file, running the application will generate the Agency code.json locally.
+
 The application provides command-line usage syntax help via the `--help` switch.
 ```
 $ create-inventory.js --help
@@ -69,6 +71,8 @@ $ create-inventory.js --help
     -c, --configFile <file>  Configuration file
     -h, --help               output usage information
 ```
+To run the application locally, you need to:
+
 1. Change the working directory to the bin folder. 
 
 2. To generate an inventory, run the application and provide a configuration file
@@ -82,6 +86,15 @@ $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.
 > Note: This example assumes a file containing proper configuration is located
 > in the current working directory and is called `create-agency-inventory.config.json`.
 > Adjust this usage to suit actual work environment.
+
+### Run the application with GitHub Actions
+
+GitHub Actions is being used to run a scheduled event to create the Agency's code.json file daily.
+
+As mentioned earlier, if a "code.json" snippet file is not provided by the project maintainer, the
+application will attempt to infer sufficient/required properties from the
+target project and generate the best possible metadata for inclusion in the
+agency inventory.
 
 The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
 
