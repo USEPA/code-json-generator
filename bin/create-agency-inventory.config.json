@@ -7,11 +7,8 @@
       "organization": "usepa",
       "username": "process.env.username",
       "password": "process.env.GITHUB_API_TOKEN",
-      "host": "api.github.com",
+      "host": "api.github.com"
 
-      "exclude": [
-        "revampd"
-      ]
     }
   ]
 }
