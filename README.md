@@ -23,6 +23,7 @@ application will attempt to infer sufficient/required properties from the
 target project and generate the best possible metadata for inclusion in the
 agency inventory.
 
+test text.
 
 Getting Started
 ---------------
