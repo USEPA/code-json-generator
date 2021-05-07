@@ -2,8 +2,8 @@ name: "Daily code.json update"
 
 on:
   schedule:
-    # Runs at the 10th minute of each hour of every day.
-    - cron: '10 * * * *'
+    # Runs every 10 minutes of each hour of every day.
+    - cron: '0/10 * * * *'
 
 jobs:
   build:
