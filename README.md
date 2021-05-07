@@ -23,7 +23,6 @@ application will attempt to infer sufficient/required properties from the
 target project and generate the best possible metadata for inclusion in the
 agency inventory.
 
-test text.
 
 Getting Started
 ---------------
@@ -88,7 +87,29 @@ $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.
 > in the current working directory and is called `create-agency-inventory.config.json`.
 > Adjust this usage to suit actual work environment.
 
-### Run the application with GitHub Actions
+Deployment to Cloud.gov with GitHub Actions
+-------------------------------------------
+You can deploy the app to Cloud.gov with (or without) GitHub Actions.
+
+### Prerequisites
+To do this you will need a Cloud.gov account and the [Cloud Foundry Command Line Tools](https://github.com/cloudfoundry/cli#installers-and-compressed-binaries) installed on your machine.  
+
+1. Login to cloud.gov
+2. Navigate to your organization's space which the app will be deployed to.
+3. Create a service account (space deployer), build and deploy the app to Cloud.gov.
+4. Create a service key.
+5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
+6. 5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
+  
+- From `app` directory run:  
+`npm run cloudgov`  
+  
+- Change directories to `app\dist\cloudgov` and run:  
+`cf push test-power-profile`  
+  
+*Note: you will first need to log into Cloud.gov (see `cf login`)*  
+
+Agecny code.json Daily update through GitHub Actions
 
 GitHub Actions is being used to run a scheduled event to create the Agency's code.json file daily.
 
@@ -98,6 +119,9 @@ target project and generate the best possible metadata for inclusion in the
 agency inventory.
 
 The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
+
+test text, ignore.
+
 
 Development
 -----------
