@@ -89,27 +89,19 @@ $ create-inventory.js --configFile ./create-agency-inventory.config.json > code.
 
 Deployment to Cloud.gov with GitHub Actions
 -------------------------------------------
-You can deploy the app to Cloud.gov with (or without) GitHub Actions.
+You can deploy the app to Cloud.gov with GitHub Actions.
 
 ### Prerequisites
 To do this you will need a Cloud.gov account and the [Cloud Foundry Command Line Tools](https://github.com/cloudfoundry/cli#installers-and-compressed-binaries) installed on your machine.  
 
 1. Login to cloud.gov
 2. Navigate to your organization's space which the app will be deployed to.
-3. Create a service account (space deployer), build and deploy the app to Cloud.gov.
-4. Create a service key.
-5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
-6. 5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
+3. Follow the documentation to create a cloud.gov service account ([plan:space deployer](https://github.com/USEPA/power-profiler)) for continuous deployment to Cloud.gov.
+4. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
+5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
   
-- From `app` directory run:  
-`npm run cloudgov`  
-  
-- Change directories to `app\dist\cloudgov` and run:  
-`cf push test-power-profile`  
-  
-*Note: you will first need to log into Cloud.gov (see `cf login`)*  
-
-Agecny code.json Daily update through GitHub Actions
+Agency code.json Daily update through GitHub Actions
+-------------------------------------------
 
 GitHub Actions is being used to run a scheduled event to create the Agency's code.json file daily.
 
@@ -120,8 +112,17 @@ agency inventory.
 
 The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
 
-test text, ignore.
+### Update frequency of the Agency's code.json file
 
+You can modify how frequently the Agency's code.json file is generated and published to cloud.gov.
+
+1. Change the working directory to the .github/workflows folder.
+
+2. Open the daily.yml file.
+
+3. Update the `schedule` event per the desired frequency.
+
+4. Save, commit and push your changes.
 
 Development
 -----------
