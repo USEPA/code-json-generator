@@ -55,6 +55,10 @@ is provided to help get started.
 3. Move the new configuration file from the etc folder into the bin folder.
 4. Rename the configuration file to create-agency-inventory-config.js.
 
+Running locally or on cloud.gov
+-------------------------------
+You can run the code.json generator locally or deploy it to cloud.gov.
+
 ### Run the application locally
 
 Running the application locally will help identify the specific repositories with missing or invalid code.json files. After all repositories have a valid code.json file, running the application will generate the Agency code.json locally.
