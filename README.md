@@ -96,7 +96,7 @@ To do this you will need a Cloud.gov account and the [Cloud Foundry Command Line
 
 1. Login to cloud.gov
 2. Navigate to your organization's space which the app will be deployed to.
-3. Follow the documentation to create a cloud.gov service account ([plan:space deployer](https://cloud.gov/docs/services/cloud-gov-service-account/) for continuous deployment to Cloud.gov.
+3. Follow the documentation to create a cloud.gov service account plan: [space deployer](https://cloud.gov/docs/services/cloud-gov-service-account/) for continuous deployment to Cloud.gov.
 4. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
 5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
   
