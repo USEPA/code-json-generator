@@ -104,18 +104,6 @@ To do this you will need a Cloud.gov account and the [Cloud Foundry Command Line
 4. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
 5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
   
-Agency code.json Daily update through GitHub Actions
--------------------------------------------
-
-GitHub Actions is being used to run a scheduled event to create the Agency's code.json file daily.
-
-As mentioned earlier, if a "code.json" snippet file is not provided by the project maintainer, the
-application will attempt to infer sufficient/required properties from the
-target project and generate the best possible metadata for inclusion in the
-agency inventory.
-
-The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
-
 ### Update frequency of the Agency's code.json file
 
 You can modify how frequently the Agency's code.json file is generated and published to cloud.gov.
@@ -127,6 +115,18 @@ You can modify how frequently the Agency's code.json file is generated and publi
 3. Update the `schedule` event per the desired frequency.
 
 4. Save, commit and push your changes.
+
+Agency code.json Daily update through GitHub Actions
+-------------------------------------------
+
+GitHub Actions is being used to run a scheduled event to create the Agency's code.json file daily.
+
+As mentioned earlier, if a "code.json" snippet file is not provided by the project maintainer, the
+application will attempt to infer sufficient/required properties from the
+target project and generate the best possible metadata for inclusion in the
+agency inventory.
+
+The example EPA Agency code.json for the github.com/USEPA organization can be [found here](https://code-json-cg.app.cloud.gov/code.json). 
 
 Development
 -----------
