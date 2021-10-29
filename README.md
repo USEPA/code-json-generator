@@ -103,7 +103,21 @@ To do this you will need a Cloud.gov account and the [Cloud Foundry Command Line
 3. Follow the documentation to create a cloud.gov service account plan: [space deployer](https://cloud.gov/docs/services/cloud-gov-service-account/) for continuous deployment to Cloud.gov.
 4. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets.
 5. Add the service key username as the CG_USERNAME secret in the GitHub Repository's Secrets. 
-  
+
+### Deploying to cloud.gov
+
+You need to establish the name of your application before deploying it to cloud.gov.
+
+1. Change the working directory to the etc/manifests folder.
+
+2. Open the frontend.yml file.
+
+3. Update the applications "name:" to whatever subdomain you wish to use (e.g., your-app-name).
+
+4. Save, commit and push your changes.
+
+5. You will see the code.json file located at: your-app-name.app.cloud.gov/code.json
+
 ### Update frequency of the Agency's code.json file
 
 You can modify how frequently the Agency's code.json file is generated and published to cloud.gov.
