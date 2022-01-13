@@ -2,8 +2,8 @@ name: "Daily code.json update"
 
 on:
   schedule:
-    # Runs at the 15th minute of the 6th, 9th, 12th, 15th (3pm), 18th (6pm), and 21st(9pm) hour of every day.
-    - cron: '15 6,9,12,15,18,21 * * *'
+    # Runs at the 15th minute of the 6th and 18th hour, each day of the month, for all months, and all days of the week.
+    - cron: '15 6, 18 * * *'
 
 jobs:
   build:
