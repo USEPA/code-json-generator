@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git fetch origin/output
+          git fetch --depth=1 origin output
           git worktree add -b output ../output origin/output
           mv code.json ../output/code.json
           cd ../output/
