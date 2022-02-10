@@ -27,7 +27,7 @@ jobs:
 
       - name: Run code json generator
         run: |
-          ./bin/run-codejsongenerator && echo "Run code json generator"
+          ./bin/run-codejsongenerator.sh && echo "Run code json generator"
 
       - name: Commit & Push
         if: ${{ success() }}
