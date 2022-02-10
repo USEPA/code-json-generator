@@ -39,11 +39,3 @@ jobs:
           git add .
           git commit -m "Automated workflow from GitHub Actions"
           git push
-
-      - name: Make the cloudgov-deploy script executable
-        if: ${{ success() }}
-        run: chmod +x ./bin/deploy-cloudgov
-      
-      - name: Deploy the app to cloud.gov
-        if: ${{ success() }}
-        run: ./bin/deploy-cloudgov && echo "Deploy"
