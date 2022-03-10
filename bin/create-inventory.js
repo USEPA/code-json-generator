@@ -6,7 +6,7 @@ const commander = require('commander');
 
 const pkgJson = require('../package.json');
 
-const GitHubInventoryFactory = require('../lib/github/inventory-factory')
+const GitHubInventoryFactory = require('../lib/github/inventory-factory');
       //Commented out GitLab since we are not using it.
       //GitLabInventoryFactory = require('../lib/gitlab/inventory-factory');
 
@@ -17,7 +17,7 @@ const createFactory = (config, endpoint) => {
     return new GitHubInventoryFactory(config, endpoint);
   } //else if (endpoint.type === 'gitlab') {
     //return new GitLabInventoryFactory(config, endpoint);
-    else {
+  else {
     throw new Error(`Unknown factory type '${endpoint.type}'\n`);
   }
 }
