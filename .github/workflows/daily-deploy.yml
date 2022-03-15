@@ -1,49 +1,49 @@
-# name: "Daily code.json deployment to cloud.gov"
+name: "Daily code.json deployment to cloud.gov"
 
-# on:
-#   schedule:
-#     # Runs at the 30th minute of the 18th hour, each day of the month, for all months, and all days of the week.
-#     - cron: '30 18 * * *'
+on:
+  schedule:
+    # Runs at the 30th minute of the 18th hour, each day of the month, for all months, and all days of the week.
+    - cron: '30 18 * * *'
 
-# jobs:
-#   build:
-#     name: Build
-#     runs-on: "ubuntu-latest"
+jobs:
+  build:
+    name: Build
+    runs-on: "ubuntu-latest"
    
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v2
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
   
-#   run:
-#     name: Run
-#     runs-on: "ubuntu-latest"
-#     needs: build
+  run:
+    name: Run
+    runs-on: "ubuntu-latest"
+    needs: build
 
-#     env:
-#       CF_USERNAME: ${{ secrets.CG_USERNAME}}
-#       CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
+    env:
+      CF_USERNAME: ${{ secrets.CG_USERNAME}}
+      CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
     
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v2
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
 
-#       - name: Run code json generator
-#         run: |
-#           ./bin/run-codejsongenerator && echo "Run code json generator"
+      - name: Run code json generator
+        run: |
+          ./bin/run-codejsongenerator && echo "Run code json generator"
 
-#       - name: Commit & Push
-#         if: ${{ success() }}
-#         run: |
-#           git config user.name github-actions
-#           git config user.email github-actions@github.com
-#           git add .
-#           git commit -m "Automated workflow from GitHub Actions"
-#           git push
+      - name: Commit & Push
+        if: ${{ success() }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Automated workflow from GitHub Actions"
+          git push
 
-#       - name: Make the cloudgov-deploy script executable
-#         if: ${{ success() }}
-#         run: chmod +x ./bin/deploy-cloudgov
+      - name: Make the cloudgov-deploy script executable
+        if: ${{ success() }}
+        run: chmod +x ./bin/deploy-cloudgov
       
-#       - name: Deploy the app to cloud.gov
-#         if: ${{ success() }}
-#         run: ./bin/deploy-cloudgov && echo "Deploy"
+      - name: Deploy the app to cloud.gov
+        if: ${{ success() }}
+        run: ./bin/deploy-cloudgov && echo "Deploy"
