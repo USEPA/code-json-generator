@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+CF_LOGIN="https://api.fr.cloud.gov"
+CF_ORG="sandbox-epa"
+CF_SPACE="ibarra.michelle"
+FRONTEND_NAME="code-json-cg"
+FRONTEND_MANIFEST="etc/manifests/frontend.yml"
+
+# This directory is used to persist the Cloud Foundry credentials
+mkdir -p $HOME/.cf
+
+# Container with Cloud Foundry client and blue-green-deploy, autopilot plug-ins
+docker pull governmentpaas/cf-cli:latest
+
+# Execute all the CF commands via the container -- CircleCI provides docker
+# out-of-the-box, but not the CF command-line interface tools.
+cf_run() {
+  docker run \
+    --rm \
+    -v $HOME/.cf:/root/.cf \
+    -v $PWD:/app \
+    -w /app \
+    governmentpaas/cf-cli \
+    cf "$@"
+}
+
+# Sign in to the cloud.gov space that the app will be deployed to. 
+#
+# CF_USERNAME and CF_PASSWORD are set in the GitHub Actions environment
+#
+# They should be populated with a space deployer service key credentials, as described at:
+# https://cloud.gov/docs/services/cloud-gov-service-account/
+cf_run login -a $CF_LOGIN -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
+
+cf_run push $FRONTEND_NAME -f $FRONTEND_MANIFEST
