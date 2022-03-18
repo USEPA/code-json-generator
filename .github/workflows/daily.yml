@@ -1,11 +1,11 @@
-name: "Test Daily code.json update"
+name: "Daily code.json update"
 
 on: [push]
 #  schedule:
     # Run at 6:15am UTC every day
  #   - cron: '15 6 * * *'
 
-  workflow_dispatch:
+  #workflow_dispatch:
 
 jobs:
   build:
