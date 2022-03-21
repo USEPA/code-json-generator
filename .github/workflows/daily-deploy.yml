@@ -3,7 +3,7 @@ name: "Daily code.json deployment to cloud.gov"
 on:
   schedule:
     # Run at 6:15 pm UTC (2:15 pm EST) every day
-    - cron: '05 18 * * *'
+    - cron: '15 18 * * *'
 
 jobs:
   build:
