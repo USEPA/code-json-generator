@@ -19,9 +19,9 @@ jobs:
     runs-on: "ubuntu-latest"
     needs: build
 
-    env:
-      CF_USERNAME: ${{ secrets.CG_USERNAME}}
-      CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
+    #env:
+    #  CF_USERNAME: ${{ secrets.CG_USERNAME}}
+    #  CF_PASSWORD: ${{ secrets.CG_PASSWORD}}
     
     steps:
       - name: Check out code
@@ -44,11 +44,11 @@ jobs:
           git commit -m "Automated workflow from GitHub Actions"
           git push origin output-cloudgov
 
-      - name: Make the cloudgov-deploy script executable
-        if: ${{ success() }}
-        run: |
-        chmod +x ./bin/deploy-cloudgov
+      #- name: Make the cloudgov-deploy script executable
+      #  if: ${{ success() }}
+      #  run: |
+      #  chmod +x ./bin/deploy-cloudgov
       
-      - name: Deploy the app to cloud.gov
-        if: ${{ success() }}
-        run: ./bin/deploy-cloudgov && echo "Deploy"
+      #- name: Deploy the app to cloud.gov
+      #  if: ${{ success() }}
+      #  run: ./bin/deploy-cloudgov && echo "Deploy"
