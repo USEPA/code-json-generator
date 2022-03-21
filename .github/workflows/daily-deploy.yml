@@ -45,7 +45,8 @@ jobs:
           git push origin output-cloudgov
           pwd
           git branch
-          git checkout fix-cg-output
+          git worktree remove output-cloudgov
+          pwd
           git branch
 
 
