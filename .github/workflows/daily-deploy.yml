@@ -46,7 +46,6 @@ jobs:
           pwd
           git branch
           git worktree remove output-cloudgov
-          pwd
           git branch
 
 
