@@ -44,8 +44,7 @@ jobs:
           git commit -m "Automated workflow from GitHub Actions"
           git push origin output-cloudgov
           pwd
-          git worktree list
-          cd ./home/runner/work/code-json-generator/code-json-generator
+          cd ..
           pwd
           
 
