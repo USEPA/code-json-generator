@@ -45,6 +45,8 @@ jobs:
           git push origin output-cloudgov
           pwd
           git branch
+          git checkout fix-cg-output
+          git branch
 
 
       #- name: Make the cloudgov-deploy script executable
