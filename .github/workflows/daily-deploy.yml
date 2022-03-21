@@ -45,6 +45,10 @@ jobs:
           git push origin output-cloudgov
           pwd
           git worktree list
+          git worktree remove
+          git worktree list
+          
+
 
 
       #- name: Make the cloudgov-deploy script executable
