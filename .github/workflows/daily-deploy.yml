@@ -44,6 +44,8 @@ jobs:
           git commit -m "Automated workflow from GitHub Actions"
           git push origin output-cloudgov
           pwd
+          git branch
+
 
       #- name: Make the cloudgov-deploy script executable
       #  if: ${{ success() }}
