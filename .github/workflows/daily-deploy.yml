@@ -44,7 +44,7 @@ jobs:
           git commit -m "Automated workflow from GitHub Actions"
           git push origin output-cloudgov
           pwd
-          git checkout fix-cg-output
+          git checkout output-cloudgov code.json
           pwd
 
 
