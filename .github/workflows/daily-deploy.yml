@@ -45,7 +45,7 @@ jobs:
           git push origin output-cloudgov
           pwd
           git worktree list
-          git worktree remove
+          git worktree remove output-cloudgov
           git worktree list
           
 
