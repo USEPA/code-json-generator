@@ -66,4 +66,4 @@ jobs:
          ls
          git checkout output-cloudgov -- code.json
          ls
-        ./bin/deploy-cloudgov && echo "Deploy"
+         ./bin/deploy-cloudgov && echo "Deploy"
