@@ -47,7 +47,6 @@ jobs:
       - name: Make the cloudgov-deploy script executable
         if: ${{ success() }}
         run: |
-        git checkout output-cloudgov code.json
         chmod +x ./bin/deploy-cloudgov
       
       - name: Deploy the app to cloud.gov
