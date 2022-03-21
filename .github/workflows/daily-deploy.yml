@@ -45,8 +45,8 @@ jobs:
           git push origin output-cloudgov
           pwd
           git worktree list
-          git worktree remove output-cloudgov
-          git worktree list
+          cd ./home/runner/work/code-json-generator/code-json-generator
+          pwd
           
 
 
