@@ -46,7 +46,6 @@ jobs:
           pwd
           cd ..
           pwd
-          git checkout output-cloudgov code.json
           ls
           
 
